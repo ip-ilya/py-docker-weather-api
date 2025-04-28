@@ -14,8 +14,8 @@ def get_weather() -> None:
         response_json = requests.get(f"{URL}?key={api_key}&q={CITY}").json()
         print(f"Celsius: {response_json['current']['temp_c']}")
         print(f"Fahrenheit: {response_json['current']['temp_f']}")
-
-    print("Please, provide your API key!")
+    else:
+        print("Please, provide your API key!")
 
 
 if __name__ == "__main__":
